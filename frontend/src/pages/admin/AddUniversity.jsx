@@ -184,9 +184,12 @@ export default function AddUniversity() {
               <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
                 {bannerPreview ? (
                   <div className="relative inline-block">
-                    <img src={bannerPreview} alt="Banner" className="h-32 rounded-lg object-cover" />
+                    <img src={bannerPreview} alt="Banner" className="h-32 rounded-lg object-cover" onError={(e) => {
+                      e.target.style.display = 'none'
+                      toast.error('Invalid image URL')
+                    }} />
                     <button type="button" onClick={() => { setBannerPreview(''); setForm(f => ({ ...f, bannerImage: '' })) }}
-                      className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center">
+                      className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600">
                       <FiX className="w-3 h-3" />
                     </button>
                   </div>
