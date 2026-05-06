@@ -36,10 +36,10 @@ export default function About() {
               <span className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 mb-3">Our Story</span>
               <h2 className="section-title mb-4">From Student to Guide</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                I'm Lakshya, and I completed my MBBS from Russia. The journey wasn't easy—navigating admissions, visas, and settling in a foreign country was overwhelming. But the experience transformed my life.
+                I am Lakshya, and I completed my MBBS from Russia. The journey was not easy—navigating admissions, visas, and settling in a foreign country was overwhelming. But the experience transformed my life.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                After returning to India, I realized many students face the same challenges I did. That's why I started KelMedica—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
+                After returning to India, I realized many students face the same challenges I did. That is why I started KelMedica—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[['Genuine', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['Transparent', 'Process']].map(([n, l]) => (
@@ -53,10 +53,10 @@ export default function About() {
             <FadeIn delay={0.2}>
               <div className="space-y-4">
                 {[
-                  { icon: '🎓', title: 'Real Student Experience', desc: 'I studied MBBS in Russia myself. I know exactly what you'll face and how to prepare for it.' },
-                  { icon: '💯', title: 'Honest Advice', desc: 'No fake promises or exaggerated claims. I'll tell you the reality—both good and challenging aspects.' },
+                  { icon: '🎓', title: 'Real Student Experience', desc: 'I studied MBBS in Russia myself. I know exactly what you will face and how to prepare for it.' },
+                  { icon: '💯', title: 'Honest Advice', desc: 'No fake promises or exaggerated claims. I will tell you the reality—both good and challenging aspects.' },
                   { icon: '🤝', title: 'Personal Support', desc: 'From choosing the right university to settling in Russia, I guide you based on my own journey.' },
-                  { icon: '📞', title: 'Always Available', desc: 'Have questions? Reach out anytime on WhatsApp. I'm here to help, not just sell.' },
+                  { icon: '📞', title: 'Always Available', desc: 'Have questions? Reach out anytime on WhatsApp. I am here to help, not just sell.' },
                 ].map(item => (
                   <div key={item.title} className="card p-5 flex gap-4">
                     <span className="text-3xl flex-shrink-0">{item.icon}</span>
