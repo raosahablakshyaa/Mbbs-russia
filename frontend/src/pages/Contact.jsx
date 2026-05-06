@@ -4,6 +4,8 @@ import { contactAPI } from '../api'
 import { FadeIn } from '../components/ui/Animations'
 import { FiPhone, FiMail, FiMapPin, FiSend, FiClock } from 'react-icons/fi'
 import { FaWhatsapp, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const contactInfo = [
   { icon: FiPhone, label: 'Phone', value: '+91 99999 99999', href: 'tel:+919999999999', color: 'text-blue-600' },
@@ -34,6 +36,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.contact} canonical="/contact" />
       <section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { FadeIn } from '../components/ui/Animations'
 import { FiArrowRight } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const fees = [
   { name: 'Tula State University', tuition: '₹3–4.5 Lakh', hostel: '₹60,000', food: '₹40,000', total: '₹4–5.5 Lakh', duration: '6 Years', medium: 'English' },
@@ -22,6 +24,7 @@ const otherCosts = [
 export default function Fees() {
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.fees} canonical="/fees" />
       <section className="py-16 bg-gradient-to-br from-green-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

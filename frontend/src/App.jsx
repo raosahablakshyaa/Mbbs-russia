@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import WhatsAppFloat from './components/layout/WhatsAppFloat'
 import ProtectedRoute from './components/layout/ProtectedRoute'
+import Breadcrumb from './components/Breadcrumb'
 
 // Public Pages
 import Home from './pages/Home'
@@ -37,6 +38,7 @@ function PublicLayout({ children }) {
   return (
     <>
       <Navbar />
+      <Breadcrumb />
       <main>{children}</main>
       <Footer />
       <WhatsAppFloat />

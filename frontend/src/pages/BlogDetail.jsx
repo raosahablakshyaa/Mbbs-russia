@@ -4,6 +4,8 @@ import { blogAPI } from '../api'
 import { Skeleton } from '../components/ui/Skeleton'
 import { FiCalendar, FiClock, FiArrowLeft, FiShare2 } from 'react-icons/fi'
 import toast from 'react-hot-toast'
+import SEOHead from '../components/SEOHead'
+import { blogMeta, SITE } from '../utils/seo'
 
 const staticContent = {
   'mbbs-in-russia-fees-2024': {
@@ -45,6 +47,19 @@ export default function BlogDetail() {
     toast.success('Link copied to clipboard!')
   }
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: blog.title,
+    description: blog.excerpt,
+    image: blog.featuredImage || `${SITE.url}/og-image.jpg`,
+    author: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+    publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: SITE.logo } },
+    datePublished: blog.createdAt,
+    dateModified: blog.updatedAt || blog.createdAt,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.url}/blog/${blog.slug}` },
+  }
+
   if (loading) return (
     <div className="pt-20 max-w-4xl mx-auto px-4 py-16 space-y-4">
       <Skeleton className="h-8 w-3/4" />
@@ -66,6 +81,7 @@ export default function BlogDetail() {
 
   return (
     <div className="pt-20">
+      <SEOHead {...blogMeta(blog)} canonical={`/blog/${blog.slug}`} ogType="article" schema={articleSchema} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/blog" className="inline-flex items-center gap-2 text-blue-600 hover:underline mb-6 text-sm">
           <FiArrowLeft className="w-4 h-4" /> Back to Blog

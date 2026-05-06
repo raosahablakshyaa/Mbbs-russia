@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { FiArrowRight, FiMapPin, FiThermometer, FiUsers } from 'react-icons/fi'
 import { FaLandmark, FaUniversity, FaPassport } from 'react-icons/fa'
+import SEOHead from '../components/SEOHead'
+import { SEO, SITE } from '../utils/seo'
 
 const facts = [
   { icon: FaLandmark, label: 'Capital', value: 'Moscow' },
@@ -22,8 +24,17 @@ const cities = [
 ]
 
 export default function Russia() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'MBBS in Russia for Indian Students — Complete Guide 2025',
+    description: SEO.russia.description,
+    author: { '@type': 'Organization', name: SITE.name },
+    publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: SITE.logo } },
+  }
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.russia} canonical="/russia" schema={schema} />
       {/* Hero */}
       <section className="relative py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-red-900 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1600')] bg-cover bg-center" />

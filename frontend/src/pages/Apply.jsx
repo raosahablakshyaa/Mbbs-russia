@@ -4,6 +4,8 @@ import toast from 'react-hot-toast'
 import { applicationAPI } from '../api'
 import { FadeIn } from '../components/ui/Animations'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const universities = ['Tula State University', 'Pskov State University', 'Mari State University', 'Tver State Medical University', 'Novgorod State University', 'Not Sure (Need Guidance)']
 
@@ -54,6 +56,7 @@ export default function Apply() {
 
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.apply} canonical="/apply" />
       <section className="py-16 bg-gradient-to-br from-blue-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

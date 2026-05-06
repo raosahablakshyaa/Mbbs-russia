@@ -9,6 +9,8 @@ import TestimonialsSlider from '../components/ui/TestimonialsSlider'
 import FAQ from '../components/ui/FAQ'
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { CardSkeleton } from '../components/ui/Skeleton'
+import SEOHead from '../components/SEOHead'
+import { SEO, SITE } from '../utils/seo'
 
 const whyCards = [
   { icon: FaMoneyBillWave, title: 'Affordable Fees', desc: 'MBBS in Russia costs ₹3–5 lakh/year, far cheaper than private colleges in India.', color: 'from-green-400 to-emerald-600' },
@@ -60,8 +62,46 @@ export default function Home() {
       .finally(() => setLoading(false))
   }, [])
 
+  const homeSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${SITE.url}/#organization`,
+        name: SITE.name,
+        url: SITE.url,
+        logo: { '@type': 'ImageObject', url: SITE.logo },
+        contactPoint: { '@type': 'ContactPoint', telephone: SITE.phone, contactType: 'customer service', areaServed: 'IN', availableLanguage: ['English', 'Hindi'] },
+        address: { '@type': 'PostalAddress', streetAddress: '123, Medical Hub, Connaught Place', addressLocality: 'New Delhi', addressRegion: 'Delhi', postalCode: '110001', addressCountry: 'IN' },
+      },
+      {
+        '@type': 'LocalBusiness',
+        name: SITE.name,
+        image: SITE.logo,
+        telephone: SITE.phone,
+        email: SITE.email,
+        url: SITE.url,
+        address: { '@type': 'PostalAddress', streetAddress: '123, Medical Hub, Connaught Place', addressLocality: 'New Delhi', addressRegion: 'Delhi', postalCode: '110001', addressCountry: 'IN' },
+        openingHours: 'Mo-Sa 09:00-19:00',
+        priceRange: 'Free Counseling',
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE.url}/#website`,
+        url: SITE.url,
+        name: SITE.name,
+        potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${SITE.url}/universities?search={search_term_string}` }, 'query-input': 'required name=search_term_string' },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      },
+    ]
+  }
+
   return (
     <div className="overflow-x-hidden">
+      <SEOHead {...SEO.home} canonical="/" schema={homeSchema} />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">

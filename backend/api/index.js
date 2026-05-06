@@ -29,6 +29,7 @@ app.use('/api/contacts', require('../routes/contacts'))
 app.use('/api/testimonials', require('../routes/testimonials'))
 app.use('/api/dashboard', require('../routes/dashboard'))
 app.use('/api/upload', require('../routes/upload'))
+app.use('/', require('../routes/seo'))
 
 app.get('/', (req, res) => res.json({ message: 'MBBS Russia Guide API', status: 'ok', version: '1.0.0' }))
 app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }))

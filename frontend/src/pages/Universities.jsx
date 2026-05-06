@@ -4,6 +4,8 @@ import UniversityCard from '../components/ui/UniversityCard'
 import { CardSkeleton } from '../components/ui/Skeleton'
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { FiSearch, FiFilter } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const staticUniversities = [
   { _id: '1', name: 'Tula State University', slug: 'tula-state-university', city: 'Tula', tuitionFees: '₹3–4.5L/yr', duration: '6 Years', medium: 'English', recognition: ['NMC', 'WHO'], ranking: 1 },
@@ -31,6 +33,7 @@ export default function Universities() {
 
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.universities} canonical="/universities" />
       <section className="py-16 bg-gradient-to-br from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

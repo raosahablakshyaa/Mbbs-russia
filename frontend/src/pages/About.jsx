@@ -1,5 +1,7 @@
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const team = [
   { name: 'Dr. Rajesh Kumar', role: 'Founder & Chief Counselor', exp: '15+ Years Experience', emoji: '👨‍⚕️' },
@@ -20,6 +22,7 @@ const milestones = [
 export default function About() {
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.about} canonical="/about" />
       <section className="py-16 bg-gradient-to-br from-blue-900 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

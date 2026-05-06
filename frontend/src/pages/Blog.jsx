@@ -4,6 +4,8 @@ import { blogAPI } from '../api'
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { Skeleton } from '../components/ui/Skeleton'
 import { FiSearch, FiCalendar, FiClock, FiArrowRight } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const staticBlogs = [
   { _id: '1', title: 'MBBS in Russia Fees 2024 — Complete Guide for Indian Students', slug: 'mbbs-in-russia-fees-2024', excerpt: 'Complete breakdown of MBBS fees in Russia including tuition, hostel, food and other expenses for Indian students.', category: 'Fees', readTime: '5 min', createdAt: '2024-01-15', featuredImage: '' },
@@ -37,6 +39,7 @@ export default function Blog() {
 
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.blog} canonical="/blog" />
       <section className="py-16 bg-gradient-to-br from-indigo-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

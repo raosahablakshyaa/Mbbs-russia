@@ -5,6 +5,9 @@ import { FadeIn } from '../components/ui/Animations'
 import { FiMapPin, FiClock, FiGlobe, FiYoutube, FiArrowRight } from 'react-icons/fi'
 import { FaCheckCircle, FaStar } from 'react-icons/fa'
 import { Skeleton } from '../components/ui/Skeleton'
+import SEOHead from '../components/SEOHead'
+import FAQ from '../components/ui/FAQ'
+import { universityMeta, SITE } from '../utils/seo'
 
 const staticData = {
   'tula-state-university': {
@@ -97,8 +100,43 @@ export default function UniversityDetail() {
 
   const u = university
 
+  const uFaqs = [
+    { q: `Is ${u.name} NMC approved?`, a: `Yes, ${u.name} is approved by the National Medical Commission (NMC) of India. Indian students can study MBBS here and appear for FMGE/NEXT exam.` },
+    { q: `What are the fees at ${u.name}?`, a: `The tuition fees at ${u.name} are ${u.tuitionFees}. Hostel fees are ${u.hostelFees || 'approximately ₹55,000–₹70,000/year'}.` },
+    { q: `What is the duration of MBBS at ${u.name}?`, a: `The MBBS program at ${u.name} is ${u.duration || '6 years'} including internship.` },
+    { q: `Is MBBS taught in English at ${u.name}?`, a: `Yes, MBBS at ${u.name} is taught in ${u.medium || 'English'} medium. Russian language is also taught for clinical interactions.` },
+    { q: `What is the admission process for ${u.name}?`, a: `To get admission at ${u.name}, you need to be NEET qualified, have 50% in PCB, and be 17+ years old. Apply online and receive your invitation letter within 7-10 days.` },
+  ]
+
+  const uSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollegeOrUniversity',
+        name: u.name,
+        url: u.officialWebsite || SITE.url,
+        address: { '@type': 'PostalAddress', addressLocality: u.city, addressCountry: 'RU' },
+        description: u.about,
+        foundingDate: u.founded?.toString(),
+        sameAs: u.officialWebsite ? [u.officialWebsite] : [],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: uFaqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      },
+      {
+        '@type': 'Course',
+        name: `MBBS at ${u.name}`,
+        description: `Study MBBS at ${u.name}, ${u.city}, Russia. ${u.duration || '6 Years'} English medium program. Fees: ${u.tuitionFees}.`,
+        provider: { '@type': 'CollegeOrUniversity', name: u.name, sameAs: u.officialWebsite },
+        offers: { '@type': 'Offer', price: u.tuitionFees, priceCurrency: 'INR', availability: 'https://schema.org/InStock' },
+      },
+    ]
+  }
+
   return (
     <div className="pt-20">
+      <SEOHead {...universityMeta(u)} canonical={`/universities/${u.slug}`} schema={uSchema} />
       {/* Banner */}
       <div className="relative h-72 md:h-96 bg-gradient-to-br from-blue-900 to-blue-700 overflow-hidden">
         {u.bannerImage && <img src={u.bannerImage} alt={u.name} className="w-full h-full object-cover opacity-40" />}
@@ -204,6 +242,14 @@ export default function UniversityDetail() {
                 </div>
               </FadeIn>
             )}
+
+            {/* FAQ */}
+            <FadeIn>
+              <div className="card p-6">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <FAQ items={uFaqs} />
+              </div>
+            </FadeIn>
           </div>
 
           {/* Sidebar */}

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FadeIn } from '../components/ui/Animations'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const steps = [
   { num: '01', title: 'Apply Online', desc: 'Fill our simple application form with your personal details, academic records, and NEET score. Our team reviews your application within 24 hours.', icon: '📝', color: 'from-blue-500 to-blue-700', docs: ['10th & 12th Marksheets', 'NEET Scorecard', 'Passport Copy', 'Passport Photos'] },
@@ -15,6 +17,7 @@ const steps = [
 export default function Admission() {
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.admission} canonical="/admission" />
       <section className="py-16 bg-gradient-to-br from-purple-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

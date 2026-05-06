@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/Animations'
 import { FiCheckCircle, FiXCircle } from 'react-icons/fi'
+import SEOHead from '../components/SEOHead'
+import { SEO } from '../utils/seo'
 
 const criteria = [
   { title: 'Academic Qualification', icon: '📚', items: ['Passed 10+2 or equivalent', 'Minimum 50% marks in PCB (Physics, Chemistry, Biology)', '45% for SC/ST/OBC candidates', 'English as a subject in 10+2'] },
@@ -17,6 +19,7 @@ const dosDonts = {
 export default function Eligibility() {
   return (
     <div className="pt-20">
+      <SEOHead {...SEO.eligibility} canonical="/eligibility" />
       <section className="py-16 bg-gradient-to-br from-teal-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
