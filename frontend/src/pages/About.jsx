@@ -4,15 +4,15 @@ import SEOHead from '../components/SEOHead'
 import { SEO } from '../utils/seo'
 
 const team = [
-  { name: 'Lakshya Yadav', role: 'Founder & Counselor', exp: 'MBBS Graduate from Russia', emoji: '👨‍⚕️' },
+  { name: 'Kamaldeep', role: 'Founder & Counselor', exp: 'Currently Studying MBBS in Russia', emoji: '👨⚕️' },
 ]
 
 const milestones = [
-  { icon: '🎓', event: 'Started MBBS journey in Russia', desc: 'Left India with dreams and nervousness' },
-  { icon: '🌍', event: 'Adapted to Russian life', desc: 'Learned the language, culture, and system' },
-  { icon: '😷', event: 'Survived COVID pandemic abroad', desc: 'Faced lockdowns and challenges far from home' },
-  { icon: '🎉', event: 'Completed MBBS successfully', desc: 'Returned as a qualified doctor' },
-  { icon: '💡', event: 'Started helping other students', desc: 'Sharing real experience, not sales pitch' },
+  { icon: '🎓', event: 'Started MBBS journey in Russia', desc: 'Left India to pursue my medical dream' },
+  { icon: '🌍', event: 'Adapting to Russian life', desc: 'Learning the language, culture, and medical system' },
+  { icon: '📚', event: 'Currently studying MBBS', desc: 'Attending classes, clinical training, and exams' },
+  { icon: '💡', event: 'Started helping Indian students', desc: 'Sharing real experience and guidance while studying' },
+  { icon: '🎯', event: 'Building KelMedica', desc: 'Helping more students from India join top universities' },
 ]
 
 export default function About() {
@@ -36,10 +36,10 @@ export default function About() {
               <span className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 mb-3">Our Story</span>
               <h2 className="section-title mb-4">From Student to Guide</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                I am Lakshya, and I completed my MBBS from Russia. The journey was not easy—navigating admissions, visas, and settling in a foreign country was overwhelming. But the experience transformed my life.
+                I am Kamaldeep, currently pursuing my MBBS in Russia. As an Indian student studying here, I understand exactly what you will go through - the admission process, visa challenges, and adapting to life in Russia.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                After returning to India, I realized many students face the same challenges I did. That is why I started KelMedica—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
+                While studying here, I realized many Indian students need genuine guidance from someone who is actually experiencing this journey. That is why I started KelMedica - to help aspiring doctors like you with honest advice based on my real, ongoing experience in Russia.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[['Genuine', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['Transparent', 'Process']].map(([n, l]) => (
@@ -53,10 +53,10 @@ export default function About() {
             <FadeIn delay={0.2}>
               <div className="space-y-4">
                 {[
-                  { icon: '🎓', title: 'Real Student Experience', desc: 'I studied MBBS in Russia myself. I know exactly what you will face and how to prepare for it.' },
-                  { icon: '💯', title: 'Honest Advice', desc: 'No fake promises or exaggerated claims. I will tell you the reality—both good and challenging aspects.' },
-                  { icon: '🤝', title: 'Personal Support', desc: 'From choosing the right university to settling in Russia, I guide you based on my own journey.' },
-                  { icon: '📞', title: 'Always Available', desc: 'Have questions? Reach out anytime on WhatsApp. I am here to help, not just sell.' },
+                  { icon: '🎓', title: 'Current Student Experience', desc: 'I am studying MBBS in Russia right now. I know exactly what you will face because I am living it every day.' },
+                  { icon: '💯', title: 'Real-Time Guidance', desc: 'Get advice from someone who is currently in Russia, not someone who studied years ago. I share what is happening now.' },
+                  { icon: '🤝', title: 'Personal Support', desc: 'From admission to settling in Russia, I guide you based on my current experience as a student here.' },
+                  { icon: '📞', title: 'Always Available', desc: 'Have questions? Reach out anytime on WhatsApp. I am here to help fellow Indian students.' },
                 ].map(item => (
                   <div key={item.title} className="card p-5 flex gap-4">
                     <span className="text-3xl flex-shrink-0">{item.icon}</span>
@@ -77,7 +77,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-12">
             <h2 className="section-title">Who Am I?</h2>
-            <p className="section-subtitle">Your guide who walked this path before you.</p>
+            <p className="section-subtitle">Your guide who is currently walking this path.</p>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 gap-6 max-w-md mx-auto">
             {team.map(member => (
