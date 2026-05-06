@@ -8,9 +8,9 @@ import SEOHead from '../components/SEOHead'
 import { SEO } from '../utils/seo'
 
 const contactInfo = [
-  { icon: FiPhone, label: 'Phone', value: '+91 99999 99999', href: 'tel:+919999999999', color: 'text-blue-600' },
-  { icon: FaWhatsapp, label: 'WhatsApp', value: '+91 99999 99999', href: 'https://wa.me/919999999999', color: 'text-green-600' },
-  { icon: FiMail, label: 'Email', value: 'info@mbbsrussiaguide.com', href: 'mailto:info@mbbsrussiaguide.com', color: 'text-red-600' },
+  { icon: FiPhone, label: 'Phone', value: '+91 74042 13051', href: 'https://wa.me/917404213051', color: 'text-blue-600' },
+  { icon: FaWhatsapp, label: 'WhatsApp', value: '+91 74042 13051', href: 'https://wa.me/917404213051', color: 'text-green-600' },
+  { icon: FiMail, label: 'Email', value: 'lakshyayadav314@gmail.com', href: 'mailto:lakshyayadav314@gmail.com', color: 'text-red-600' },
   { icon: FiMapPin, label: 'Office', value: '123, Medical Hub, Connaught Place, New Delhi - 110001', href: '#', color: 'text-purple-600' },
   { icon: FiClock, label: 'Hours', value: 'Mon–Sat: 9 AM – 7 PM IST', href: '#', color: 'text-orange-600' },
 ]

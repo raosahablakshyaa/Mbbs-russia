@@ -44,13 +44,13 @@ export default function Footer() {
               We help Indian students achieve their dream of becoming doctors by providing expert guidance for MBBS admissions in top NMC-approved Russian medical universities.
             </p>
             <div className="space-y-3">
-              <a href="tel:+919999999999" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <a href="https://wa.me/917404213051" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                 <FiPhone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                +91 99999 99999
+                +91 74042 13051
               </a>
-              <a href="mailto:info@mbbsrussiaguide.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <a href="mailto:lakshyayadav314@gmail.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                 <FiMail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                info@mbbsrussiaguide.com
+                lakshyayadav314@gmail.com
               </a>
               <div className="flex items-start gap-3 text-sm">
                 <FiMapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3 mt-6">
               {[
-                { icon: FaWhatsapp, href: 'https://wa.me/919999999999', color: 'hover:text-green-400' },
+                { icon: FaWhatsapp, href: 'https://wa.me/917404213051', color: 'hover:text-green-400' },
                 { icon: FiFacebook, href: '#', color: 'hover:text-blue-400' },
                 { icon: FiInstagram, href: '#', color: 'hover:text-pink-400' },
                 { icon: FiYoutube, href: '#', color: 'hover:text-red-400' },

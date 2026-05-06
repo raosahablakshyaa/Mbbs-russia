@@ -25,7 +25,7 @@ export default function WhatsAppFloat() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
               👋 Hi! Need help with MBBS admissions in Russia? Chat with our expert counselor now!
             </p>
-            <a href="https://wa.me/919999999999?text=Hi, I need help with MBBS admission in Russia"
+            <a href="https://wa.me/917404213051?text=Hi, I need help with MBBS admission in Russia"
               target="_blank" rel="noopener noreferrer"
               className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-2.5 rounded-xl text-sm font-semibold transition-colors">
               Start Chat
