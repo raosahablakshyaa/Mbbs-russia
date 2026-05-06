@@ -120,7 +120,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
             <h2 className="text-3xl font-black text-white mb-4">Let Me Help You</h2>
-            <p className="text-white/80 mb-8">Get honest guidance from someone who's been through it all.</p>
+            <p className="text-white/80 mb-8">Get honest guidance from someone who has been through it all.</p>
             <Link to="/apply" className="bg-white text-blue-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors inline-block">Get Free Consultation</Link>
           </FadeIn>
         </div>
