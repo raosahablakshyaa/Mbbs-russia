@@ -164,22 +164,34 @@ export default function AddUniversity() {
           {/* Banner Image */}
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Banner Image</label>
-            <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
-              {bannerPreview ? (
-                <div className="relative inline-block">
-                  <img src={bannerPreview} alt="Banner" className="h-32 rounded-lg object-cover" />
-                  <button type="button" onClick={() => { setBannerPreview(''); setForm(f => ({ ...f, bannerImage: '' })) }}
-                    className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center">
-                    <FiX className="w-3 h-3" />
-                  </button>
-                </div>
-              ) : (
-                <label className="cursor-pointer">
-                  <FiUpload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-500">{uploading ? 'Uploading...' : 'Click to upload banner image'}</p>
-                  <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" disabled={uploading} />
-                </label>
-              )}
+            <div className="space-y-3">
+              <input
+                type="text"
+                placeholder="Or paste image URL (https://...)"
+                value={form.bannerImage || ''}
+                onChange={e => {
+                  setForm(f => ({ ...f, bannerImage: e.target.value }))
+                  setBannerPreview(e.target.value)
+                }}
+                className="input-field text-sm"
+              />
+              <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
+                {bannerPreview ? (
+                  <div className="relative inline-block">
+                    <img src={bannerPreview} alt="Banner" className="h-32 rounded-lg object-cover" />
+                    <button type="button" onClick={() => { setBannerPreview(''); setForm(f => ({ ...f, bannerImage: '' })) }}
+                      className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center">
+                      <FiX className="w-3 h-3" />
+                    </button>
+                  </div>
+                ) : (
+                  <label className="cursor-pointer">
+                    <FiUpload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                    <p className="text-sm text-gray-500">{uploading ? 'Uploading...' : 'Click to upload banner image'}</p>
+                    <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" disabled={uploading} />
+                  </label>
+                )}
+              </div>
             </div>
           </div>
         </div>
