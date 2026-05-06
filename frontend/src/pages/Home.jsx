@@ -316,9 +316,9 @@ export default function Home() {
             <p className="section-subtitle">Real experiences from Indian students studying MBBS in Russia.</p>
           </FadeIn>
           <TestimonialsSlider testimonials={testimonials.length > 0 ? testimonials : [
-            { name: 'Priya Sharma', university: 'Tula State University', year: '3rd Year', message: 'MBBS Russia Guide made my dream come true. The entire process from application to visa was handled smoothly. I am now in my 3rd year and loving every moment!', rating: 5 },
+            { name: 'Priya Sharma', university: 'Tula State University', year: '3rd Year', message: 'KelMedica made my dream come true. The entire process from application to visa was handled smoothly. I am now in my 3rd year and loving every moment!', rating: 5 },
             { name: 'Rahul Verma', university: 'Tver State Medical University', year: '2nd Year', message: 'I was confused about studying abroad but the counselors here guided me perfectly. The fees are very affordable and the university is excellent.', rating: 5 },
-            { name: 'Anjali Singh', university: 'Mari State University', year: '4th Year', message: 'Best decision of my life! The support from MBBS Russia Guide was outstanding. They helped with everything — admission, visa, accommodation.', rating: 5 },
+            { name: 'Anjali Singh', university: 'Mari State University', year: '4th Year', message: 'Best decision of my life! The support from KelMedica was outstanding. They helped with everything — admission, visa, accommodation.', rating: 5 },
           ]} />
         </div>
       </section>

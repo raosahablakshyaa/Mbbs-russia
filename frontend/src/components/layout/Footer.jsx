@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="https://as2.ftcdn.net/jpg/06/98/84/79/1000_F_698847976_0djgwN06xjaCZKpWHWVFnAdQKFhRfhCo.webp" alt="KelMedica" className="h-12 w-auto" />
+              <img src="https://as2.ftcdn.net/jpg/06/98/84/79/1000_F_698847976_0djgwN06xjaCZKpWHWVFnAdQKFhRfhCo.webp" alt="KelMedica" className="h-12 w-12 rounded-full object-cover" />
               <div>
                 <div className="font-bold text-white text-xl">KelMedica</div>
                 <div className="text-xs text-blue-400">Your Trusted Education Partner</div>

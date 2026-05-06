@@ -16,7 +16,7 @@ export default function WhatsAppFloat() {
                 <FaWhatsapp className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-gray-900 dark:text-white text-sm">MBBS Russia Guide</div>
+                <div className="font-semibold text-gray-900 dark:text-white text-sm">KelMedica</div>
                 <div className="text-xs text-green-500 flex items-center gap-1">
                   <span className="w-2 h-2 bg-green-500 rounded-full inline-block"></span> Online
                 </div>
