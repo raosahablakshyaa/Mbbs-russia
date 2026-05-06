@@ -4,19 +4,14 @@ import SEOHead from '../components/SEOHead'
 import { SEO } from '../utils/seo'
 
 const team = [
-  { name: 'Dr. Rajesh Kumar', role: 'Founder & Chief Counselor', exp: '15+ Years Experience', emoji: '👨‍⚕️' },
-  { name: 'Priya Mehta', role: 'Senior Admission Advisor', exp: '10+ Years Experience', emoji: '👩‍💼' },
-  { name: 'Amit Sharma', role: 'Visa & Documentation Expert', exp: '8+ Years Experience', emoji: '👨‍💼' },
-  { name: 'Sunita Patel', role: 'Student Relations Manager', exp: '6+ Years Experience', emoji: '👩‍🎓' },
+  { name: 'Lakshya Yadav', role: 'Founder & Counselor', exp: 'MBBS Graduate from Russia', emoji: '👨‍⚕️' },
 ]
 
 const milestones = [
-  { year: '2008', event: 'Founded MBBS Russia Guide' },
-  { year: '2012', event: 'Placed 500+ students in Russia' },
-  { year: '2016', event: 'Expanded to 10+ universities' },
-  { year: '2020', event: 'Achieved 100% visa success rate' },
-  { year: '2023', event: '5000+ students placed successfully' },
-  { year: '2024', event: 'Launched digital counseling platform' },
+  { year: '2018', event: 'Started MBBS in Russia' },
+  { year: '2020', event: 'Navigated COVID challenges abroad' },
+  { year: '2023', event: 'Completed MBBS and returned to India' },
+  { year: '2024', event: 'Started helping students with genuine guidance' },
 ]
 
 export default function About() {
@@ -27,7 +22,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-black text-white mb-4">About MBBS Russia Guide</h1>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">India's most trusted education consultancy for MBBS admissions in Russia since 2008.</p>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">Helping Indian students achieve their MBBS dreams in Russia.</p>
           </FadeIn>
         </div>
       </section>
@@ -37,18 +32,18 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
-              <span className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 mb-3">Our Mission</span>
-              <h2 className="section-title mb-4">Making Medical Dreams Affordable</h2>
+              <span className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 mb-3">Our Story</span>
+              <h2 className="section-title mb-4">From Student to Guide</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                MBBS Russia Guide was founded with a single mission: to make quality medical education accessible to every Indian student who dreams of becoming a doctor, regardless of their financial background.
+                I'm Lakshya, and I completed my MBBS from Russia. The journey wasn't easy—navigating admissions, visas, and settling in a foreign country was overwhelming. But the experience transformed my life.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                We have been helping Indian students secure admissions in top NMC-approved Russian medical universities since 2008. With over 5000 students successfully placed, we are India's most trusted MBBS abroad consultancy.
+                After returning to India, I realized many students face the same challenges I did. That's why I started MBBS Russia Guide—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {[['5000+', 'Students Placed'], ['15+', 'Years Experience'], ['100%', 'Visa Success'], ['20+', 'Partner Universities']].map(([n, l]) => (
+                {[['Real', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['No', 'Hidden Fees']].map(([n, l]) => (
                   <div key={l} className="card p-4 text-center">
-                    <div className="text-2xl font-black text-blue-600">{n}</div>
+                    <div className="text-lg font-black text-blue-600">{n}</div>
                     <div className="text-sm text-gray-500">{l}</div>
                   </div>
                 ))}
@@ -57,10 +52,10 @@ export default function About() {
             <FadeIn delay={0.2}>
               <div className="space-y-4">
                 {[
-                  { icon: '🎯', title: 'Expert Guidance', desc: 'Our counselors have personally studied or worked in Russia and provide first-hand guidance.' },
-                  { icon: '🔒', title: 'Transparent Process', desc: 'No hidden fees, no false promises. Complete transparency in every step of the admission process.' },
-                  { icon: '🤝', title: 'End-to-End Support', desc: 'From application to landing in Russia, we support you at every step of your journey.' },
-                  { icon: '📞', title: '24/7 Support', desc: 'Our team is available round the clock to answer your queries and provide assistance.' },
+                  { icon: '🎓', title: 'Real Student Experience', desc: 'I studied MBBS in Russia myself. I know exactly what you'll face and how to prepare for it.' },
+                  { icon: '💯', title: 'Honest Advice', desc: 'No fake promises or exaggerated claims. I'll tell you the reality—both good and challenging aspects.' },
+                  { icon: '🤝', title: 'Personal Support', desc: 'From choosing the right university to settling in Russia, I guide you based on my own journey.' },
+                  { icon: '📞', title: 'Always Available', desc: 'Have questions? Reach out anytime on WhatsApp. I'm here to help, not just sell.' },
                 ].map(item => (
                   <div key={item.title} className="card p-5 flex gap-4">
                     <span className="text-3xl flex-shrink-0">{item.icon}</span>
@@ -80,10 +75,10 @@ export default function About() {
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-12">
-            <h2 className="section-title">Meet Our Expert Team</h2>
-            <p className="section-subtitle">Experienced counselors dedicated to your success.</p>
+            <h2 className="section-title">Who Am I?</h2>
+            <p className="section-subtitle">Your guide who walked this path before you.</p>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 gap-6 max-w-md mx-auto">
             {team.map(member => (
               <StaggerItem key={member.name}>
                 <div className="card p-6 text-center">
@@ -102,7 +97,7 @@ export default function About() {
       <section className="py-16 bg-white dark:bg-gray-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-12">
-            <h2 className="section-title">Our Journey</h2>
+            <h2 className="section-title">My Journey</h2>
           </FadeIn>
           <div className="relative">
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900 -translate-x-1/2" />
@@ -129,9 +124,9 @@ export default function About() {
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-black text-white mb-4">Start Your Journey With Us</h2>
-            <p className="text-white/80 mb-8">Join 5000+ students who trusted us with their medical career.</p>
-            <Link to="/apply" className="bg-white text-blue-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors inline-block">Apply Now — Free</Link>
+            <h2 className="text-3xl font-black text-white mb-4">Let Me Help You</h2>
+            <p className="text-white/80 mb-8">Get honest guidance from someone who's been through it all.</p>
+            <Link to="/apply" className="bg-white text-blue-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors inline-block">Get Free Consultation</Link>
           </FadeIn>
         </div>
       </section>

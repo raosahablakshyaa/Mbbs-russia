@@ -167,11 +167,17 @@ export default function AddUniversity() {
             <div className="space-y-3">
               <input
                 type="text"
-                placeholder="Or paste image URL (https://...)"
+                placeholder="Paste image URL (https://...)"
                 value={form.bannerImage || ''}
                 onChange={e => {
-                  setForm(f => ({ ...f, bannerImage: e.target.value }))
-                  setBannerPreview(e.target.value)
+                  const url = e.target.value
+                  setForm(f => ({ ...f, bannerImage: url }))
+                  if (url) setBannerPreview(url)
+                }}
+                onPaste={e => {
+                  const url = e.clipboardData.getData('text')
+                  setForm(f => ({ ...f, bannerImage: url }))
+                  if (url) setBannerPreview(url)
                 }}
                 className="input-field text-sm"
               />
