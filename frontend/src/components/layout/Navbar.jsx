@@ -48,11 +48,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-red-600 flex items-center justify-center text-white font-bold text-lg">M</div>
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+            <img src="https://as2.ftcdn.net/jpg/06/98/84/79/1000_F_698847976_0djgwN06xjaCZKpWHWVFnAdQKFhRfhCo.webp" alt="KelMedica" className="h-10 w-auto" />
             <div className="hidden sm:block">
-              <div className="font-bold text-gray-900 dark:text-white text-sm leading-tight">MBBS Russia</div>
-              <div className="text-xs text-blue-600 font-medium">Guide</div>
+              <div className="font-bold text-gray-900 dark:text-white text-lg leading-tight">KelMedica</div>
             </div>
           </Link>
 

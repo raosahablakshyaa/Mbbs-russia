@@ -34,9 +34,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-red-600 flex items-center justify-center text-white font-bold text-xl">M</div>
+              <img src="https://as2.ftcdn.net/jpg/06/98/84/79/1000_F_698847976_0djgwN06xjaCZKpWHWVFnAdQKFhRfhCo.webp" alt="KelMedica" className="h-12 w-auto" />
               <div>
-                <div className="font-bold text-white text-lg">MBBS Russia Guide</div>
+                <div className="font-bold text-white text-xl">KelMedica</div>
                 <div className="text-xs text-blue-400">Your Trusted Education Partner</div>
               </div>
             </Link>
@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">© {new Date().getFullYear()} MBBS Russia Guide. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© {new Date().getFullYear()} KelMedica. All rights reserved.</p>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

@@ -22,7 +22,7 @@ export default function About() {
       <section className="py-16 bg-gradient-to-br from-blue-900 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">About MBBS Russia Guide</h1>
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">About KelMedica</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">Helping Indian students achieve their MBBS dreams in Russia.</p>
           </FadeIn>
         </div>
@@ -39,7 +39,7 @@ export default function About() {
                 I'm Lakshya, and I completed my MBBS from Russia. The journey wasn't easy—navigating admissions, visas, and settling in a foreign country was overwhelming. But the experience transformed my life.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                After returning to India, I realized many students face the same challenges I did. That's why I started MBBS Russia Guide—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
+                After returning to India, I realized many students face the same challenges I did. That's why I started KelMedica—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[['Genuine', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['Transparent', 'Process']].map(([n, l]) => (
