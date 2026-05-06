@@ -8,10 +8,11 @@ const team = [
 ]
 
 const milestones = [
-  { year: '2018', event: 'Started MBBS in Russia' },
-  { year: '2020', event: 'Navigated COVID challenges abroad' },
-  { year: '2023', event: 'Completed MBBS and returned to India' },
-  { year: '2024', event: 'Started helping students with genuine guidance' },
+  { icon: '🎓', event: 'Started MBBS journey in Russia', desc: 'Left India with dreams and nervousness' },
+  { icon: '🌍', event: 'Adapted to Russian life', desc: 'Learned the language, culture, and system' },
+  { icon: '😷', event: 'Survived COVID pandemic abroad', desc: 'Faced lockdowns and challenges far from home' },
+  { icon: '🎉', event: 'Completed MBBS successfully', desc: 'Returned as a qualified doctor' },
+  { icon: '💡', event: 'Started helping other students', desc: 'Sharing real experience, not sales pitch' },
 ]
 
 export default function About() {
@@ -41,7 +42,7 @@ export default function About() {
                 After returning to India, I realized many students face the same challenges I did. That's why I started MBBS Russia Guide—to help aspiring doctors like you get genuine guidance based on real experience, not just business.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {[['Real', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['No', 'Hidden Fees']].map(([n, l]) => (
+                {[['Genuine', 'Experience'], ['Honest', 'Guidance'], ['Student', 'First'], ['Transparent', 'Process']].map(([n, l]) => (
                   <div key={l} className="card p-4 text-center">
                     <div className="text-lg font-black text-blue-600">{n}</div>
                     <div className="text-sm text-gray-500">{l}</div>
@@ -99,24 +100,18 @@ export default function About() {
           <FadeIn className="text-center mb-12">
             <h2 className="section-title">My Journey</h2>
           </FadeIn>
-          <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900 -translate-x-1/2" />
-            <div className="space-y-8">
-              {milestones.map((m, i) => (
-                <FadeIn key={i} delay={i * 0.1}>
-                  <div className={`flex items-center gap-6 ${i % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`flex-1 ${i % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                      <div className="card p-4 inline-block">
-                        <div className="font-bold text-blue-600">{m.year}</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">{m.event}</div>
-                      </div>
-                    </div>
-                    <div className="w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-gray-950 flex-shrink-0 z-10" />
-                    <div className="flex-1" />
+          <div className="space-y-6 max-w-2xl mx-auto">
+            {milestones.map((m, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="card p-6 flex gap-4 items-start">
+                  <span className="text-4xl flex-shrink-0">{m.icon}</span>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-1">{m.event}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{m.desc}</p>
                   </div>
-                </FadeIn>
-              ))}
-            </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

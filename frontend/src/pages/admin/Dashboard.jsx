@@ -5,20 +5,21 @@ import { FiUsers, FiBook, FiMail, FiTrendingUp } from 'react-icons/fi'
 import { FaUniversity } from 'react-icons/fa'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts'
 
-const monthlyData = [
-  { month: 'Aug', applications: 12 }, { month: 'Sep', applications: 19 },
-  { month: 'Oct', applications: 25 }, { month: 'Nov', applications: 31 },
-  { month: 'Dec', applications: 28 }, { month: 'Jan', applications: 42 },
-]
-
 export default function Dashboard() {
   const [stats, setStats] = useState({ universities: 0, applications: 0, blogs: 0, contacts: 0 })
+  const [monthlyData, setMonthlyData] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     dashboardAPI.stats()
-      .then(res => setStats(res.data))
-      .catch(() => setStats({ universities: 5, applications: 48, blogs: 6, contacts: 23 }))
+      .then(res => {
+        setStats(res.data)
+        setMonthlyData(res.data.monthlyData || [])
+      })
+      .catch(() => {
+        setStats({ universities: 0, applications: 0, blogs: 0, contacts: 0 })
+        setMonthlyData([])
+      })
       .finally(() => setLoading(false))
   }, [])
 
@@ -55,34 +56,36 @@ export default function Dashboard() {
       </div>
 
       {/* Charts */}
-      <div className="grid lg:grid-cols-2 gap-6">
-        <div className="card p-6">
-          <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <FiTrendingUp className="text-blue-600" /> Monthly Applications
-          </h3>
-          <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={monthlyData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-              <YAxis tick={{ fontSize: 12 }} />
-              <Tooltip />
-              <Bar dataKey="applications" fill="#2563eb" radius={[6, 6, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+      {monthlyData.length > 0 && (
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="card p-6">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <FiTrendingUp className="text-blue-600" /> Monthly Applications
+            </h3>
+            <ResponsiveContainer width="100%" height={220}>
+              <BarChart data={monthlyData}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+                <YAxis tick={{ fontSize: 12 }} />
+                <Tooltip />
+                <Bar dataKey="applications" fill="#2563eb" radius={[6, 6, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="card p-6">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Application Trend</h3>
+            <ResponsiveContainer width="100%" height={220}>
+              <LineChart data={monthlyData}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+                <YAxis tick={{ fontSize: 12 }} />
+                <Tooltip />
+                <Line type="monotone" dataKey="applications" stroke="#2563eb" strokeWidth={2} dot={{ fill: '#2563eb' }} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-        <div className="card p-6">
-          <h3 className="font-bold text-gray-900 dark:text-white mb-4">Application Trend</h3>
-          <ResponsiveContainer width="100%" height={220}>
-            <LineChart data={monthlyData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-              <YAxis tick={{ fontSize: 12 }} />
-              <Tooltip />
-              <Line type="monotone" dataKey="applications" stroke="#2563eb" strokeWidth={2} dot={{ fill: '#2563eb' }} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
+      )}
 
       {/* Quick Actions */}
       <div className="card p-6">
