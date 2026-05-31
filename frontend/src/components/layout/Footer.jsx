@@ -44,13 +44,13 @@ export default function Footer() {
               We help Indian students achieve their dream of becoming doctors by providing expert guidance for MBBS admissions in top NMC-approved Russian medical universities.
             </p>
             <div className="space-y-3">
-              <a href="https://wa.me/917404213051" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <a href="tel:+918569934323" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                 <FiPhone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                +91 74042 13051
+                +91 85699 34323
               </a>
-              <a href="mailto:lakshyayadav314@gmail.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <a href="mailto:kelmedica@gmail.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                 <FiMail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                lakshyayadav314@gmail.com
+                kelmedica@gmail.com
               </a>
               <div className="flex items-start gap-3 text-sm">
                 <FiMapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />

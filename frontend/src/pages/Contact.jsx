@@ -8,9 +8,9 @@ import SEOHead from '../components/SEOHead'
 import { SEO } from '../utils/seo'
 
 const contactInfo = [
-  { icon: FiPhone, label: 'Phone', value: '+91 74042 13051', href: 'https://wa.me/917404213051', color: 'text-blue-600' },
+  { icon: FiPhone, label: 'Phone', value: '+91 85699 34323', href: 'tel:+918569934323', color: 'text-blue-600' },
   { icon: FaWhatsapp, label: 'WhatsApp', value: '+91 74042 13051', href: 'https://wa.me/917404213051', color: 'text-green-600' },
-  { icon: FiMail, label: 'Email', value: 'lakshyayadav314@gmail.com', href: 'mailto:lakshyayadav314@gmail.com', color: 'text-red-600' },
+  { icon: FiMail, label: 'Email', value: 'kelmedica@gmail.com', href: 'mailto:kelmedica@gmail.com', color: 'text-red-600' },
   { icon: FiMapPin, label: 'Office', value: '123, Medical Hub, Connaught Place, New Delhi - 110001', href: '#', color: 'text-purple-600' },
   { icon: FiClock, label: 'Hours', value: 'Mon–Sat: 9 AM – 7 PM IST', href: '#', color: 'text-orange-600' },
 ]
@@ -69,7 +69,7 @@ export default function Contact() {
 
               <div className="flex gap-3 mb-8">
                 {[
-                  { icon: FaWhatsapp, href: 'https://wa.me/919999999999', color: 'bg-green-500 hover:bg-green-600' },
+                  { icon: FaWhatsapp, href: 'https://wa.me/917404213051', color: 'bg-green-500 hover:bg-green-600' },
                   { icon: FaFacebook, href: '#', color: 'bg-blue-600 hover:bg-blue-700' },
                   { icon: FaInstagram, href: '#', color: 'bg-pink-500 hover:bg-pink-600' },
                   { icon: FaYoutube, href: '#', color: 'bg-red-600 hover:bg-red-700' },

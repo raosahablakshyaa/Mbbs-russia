@@ -130,7 +130,7 @@ export default function Home() {
               <Link to="/apply" className="btn-red text-base px-8 py-4 flex items-center gap-2">
                 Apply Now <FiArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+917404213051" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all">
+              <a href="tel:+918569934323" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all">
                 <FiPhone className="w-5 h-5" /> Free Counseling
               </a>
             </div>

@@ -70,7 +70,7 @@ export default function Admission() {
               <p className="text-gray-600 dark:text-gray-400 mb-6">Our expert counselors will guide you through every step. Apply now and get a free consultation.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/apply" className="btn-primary inline-flex items-center gap-2">Apply Now <FiArrowRight /></Link>
-                <a href="https://wa.me/917404213051" className="btn-secondary inline-flex items-center gap-2">Call for Help</a>
+                <a href="tel:+918569934323" className="btn-secondary inline-flex items-center gap-2">Call for Help</a>
               </div>
             </div>
           </FadeIn>
