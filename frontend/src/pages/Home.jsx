@@ -135,7 +135,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-6">
-              {[['5000+', 'Students Placed'], ['15+', 'Years Experience'], ['100%', 'Visa Success']].map(([num, label]) => (
+              {[['Genuine', 'Guidance'], ['Current', 'Student'], ['Honest', 'Support']].map(([num, label]) => (
                 <div key={label} className="text-center">
                   <div className="text-2xl font-black text-yellow-400">{num}</div>
                   <div className="text-white/70 text-sm">{label}</div>
