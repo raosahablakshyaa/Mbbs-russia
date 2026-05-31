@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
-Sitemap: https://mbbsrussiaguide.com/sitemap.xml
+Sitemap: https://mbbs-russia.vercel.app/sitemap.xml
