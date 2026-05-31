@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://mbbs-russia.vercel.app/sitemap.xml
+Sitemap: https://kelmedica.vercel.app/sitemap.xml

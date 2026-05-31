@@ -1,7 +1,7 @@
 // Central SEO configuration for all pages
 export const SITE = {
   name: 'KelMedica',
-  url: 'https://mbbs-russia.vercel.app',
+  url: 'https://kelmedica.vercel.app',
   logo: 'https://as2.ftcdn.net/jpg/06/98/84/79/1000_F_698847976_0djgwN06xjaCZKpWHWVFnAdQKFhRfhCo.webp',
   phone: '+918569934323',
   phoneDisplay: '+91 85699 34323',

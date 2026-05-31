@@ -4,7 +4,7 @@ const University = require('../models/University')
 const Blog = require('../models/Blog')
 const connectDB = require('../utils/db')
 
-const SITE_URL = 'https://mbbs-russia.vercel.app'
+const SITE_URL = 'https://kelmedica.vercel.app'
 
 const staticRoutes = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
